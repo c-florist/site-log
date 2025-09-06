@@ -3,3 +3,11 @@ _.file = ".env.secrets"
 
 [tools]
 python = "3.13"
+
+[tasks.format]
+description = "Run the formatter [and modify files]"
+run = "ruff format {{arg(name='dir', default='./site-log')}}"
+
+[tasks.lint]
+description = "Run the linter [and modify files]"
+run = "ruff check --fix {{arg(name='dir', default='./site-log')}}"

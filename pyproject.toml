@@ -5,3 +5,37 @@ description = "Geofenced time-on-site logger."
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = []
+
+[dependency-groups]
+dev = [
+    "ruff>=0.12.12",
+]
+
+[tool.ruff]
+respect-gitignore = true
+exclude = [
+  "__pycache__",
+  ".ruff_cache",
+]
+line-length = 120
+indent-width = 4
+target-version = "py313"
+
+[tool.ruff.lint]
+select = [
+  "E",
+  "F",
+  "UP",
+  "B",
+  "SIM",
+  "I",
+]
+ignore = [
+  "SIM108",  # Don't enforce ternary operator
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
