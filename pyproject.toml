@@ -4,7 +4,9 @@ version = "0.1.0"
 description = "Geofenced time-on-site logger."
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "django>=5.2.6",
+]
 
 [dependency-groups]
 dev = [
