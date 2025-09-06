@@ -1,0 +1,5 @@
+[env]
+_.file = ".env.secrets"
+
+[tools]
+python = "3.13"
