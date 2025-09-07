@@ -11,3 +11,7 @@ run = "ruff format {{arg(name='dir', default='.')}}"
 [tasks.lint]
 description = "Run the linter [and modify files]"
 run = "ruff check --fix {{arg(name='dir', default='.')}}"
+
+[tasks.typecheck]
+description = "Run the basedpyright type checker"
+run = "basedpyright {{arg(name='dir', default='.')}}"
