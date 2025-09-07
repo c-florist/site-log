@@ -6,8 +6,8 @@ python = "3.13"
 
 [tasks.format]
 description = "Run the formatter [and modify files]"
-run = "ruff format {{arg(name='dir', default='./site-log')}}"
+run = "ruff format {{arg(name='dir', default='.')}}"
 
 [tasks.lint]
 description = "Run the linter [and modify files]"
-run = "ruff check --fix {{arg(name='dir', default='./site-log')}}"
+run = "ruff check --fix {{arg(name='dir', default='.')}}"
