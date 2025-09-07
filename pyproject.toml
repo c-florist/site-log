@@ -43,3 +43,13 @@ quote-style = "double"
 indent-style = "space"
 skip-magic-trailing-comma = false
 line-ending = "auto"
+
+[tool.basedpyright]
+include = ["geologger", "site_log"]
+exclude = [
+  ".venv",
+  "**/__pycache__",
+  "**/.ruff_cache",
+]
+pythonVersion = "3.13"
+reportMissingImports = "error"

@@ -14,4 +14,4 @@ run = "ruff check --fix {{arg(name='dir', default='.')}}"
 
 [tasks.typecheck]
 description = "Run the basedpyright type checker"
-run = "basedpyright {{arg(name='dir', default='.')}}"
+run = "basedpyright --level error {{arg(name='dir', default='.')}}"
