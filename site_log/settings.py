@@ -58,6 +58,10 @@ WSGI_APPLICATION = "site_log.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+GEOS_LIBRARY_PATH = "/opt/homebrew/lib/libgeos_c.dylib"
+
+GDAL_LIBRARY_PATH = "/opt/homebrew/lib/libgdal.dylib"
+
 SPATIALITE_LIBRARY_PATH = "/opt/homebrew/lib/mod_spatialite.dylib"
 
 DATABASES = {
