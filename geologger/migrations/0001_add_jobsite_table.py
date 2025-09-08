@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
                 ('name', models.TextField(unique=True)),
                 ('address', models.TextField()),
                 ('location', django.contrib.gis.db.models.fields.PointField(srid=4326)),
-                ('radius_m', models.PositiveIntegerField(default=50, help_text='Radius of the geofence for this job site in meters.')),
+                ('radius_meters', models.PositiveIntegerField(default=50, help_text='Radius of the geofence for this job site in meters.')),
             ],
         ),
     ]

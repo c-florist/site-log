@@ -4,12 +4,20 @@ from django.utils import timezone
 from django.contrib.gis.db.models import PointField
 from django.db.models import DateTimeField, ForeignKey, Model, TextField, PositiveIntegerField, CASCADE
 
+from geologger.geocode import geocode_address
+
 
 class JobSite(Model):
     name = TextField(unique=True)
     address = TextField()
-    location = PointField(blank=True, null=True, editable=False)
-    radius_m = PositiveIntegerField(default=50, help_text="Radius of the geofence for this job site in meters.")
+    location = PointField()
+    radius_meters = PositiveIntegerField(default=50, help_text="Radius of the geofence for this job site in meters.")
+
+    def save(self, *args, **kwargs) -> None:
+        if self.address and not self.location:
+            self.location = geocode_address(self.address)
+
+        super().save(*args, **kwargs)
 
     def __str__(self) -> str:
         return self.name
