@@ -8,7 +8,7 @@ from django.db.models import DateTimeField, ForeignKey, Model, TextField, Positi
 class JobSite(Model):
     name = TextField(unique=True)
     address = TextField()
-    location = PointField()
+    location = PointField(blank=True, null=True, editable=False)
     radius_m = PositiveIntegerField(default=50, help_text="Radius of the geofence for this job site in meters.")
 
     def __str__(self) -> str:
