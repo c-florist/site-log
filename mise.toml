@@ -1,8 +1,14 @@
 [env]
 _.file = ".env.secrets"
+DJANGO_DEBUG = "true"
+_.python.venv = { path = ".venv", create = true }
 
 [tools]
 python = "3.13"
+
+[tasks.dev]
+description = "Run the development server"
+run = "python manage.py runserver"
 
 [tasks.format]
 description = "Run the formatter [and modify files]"
