@@ -1,7 +1,8 @@
 [env]
 _.file = ".env.secrets"
-DJANGO_DEBUG = "true"
 _.python.venv = { path = ".venv", create = true }
+
+DJANGO_DEBUG = "true"
 
 [tools]
 python = "3.13"
