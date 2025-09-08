@@ -11,6 +11,10 @@ python = "3.13"
 description = "Run the development server"
 run = "python manage.py runserver"
 
+[tasks.test]
+description = "Run unit tests"
+run = "python manage.py test"
+
 [tasks.format]
 description = "Run the formatter [and modify files]"
 run = "ruff format {{arg(name='dir', default='.')}}"
