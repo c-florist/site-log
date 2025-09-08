@@ -11,7 +11,7 @@ class JobSiteAdmin(LeafletGeoAdmin):
 
 
 @admin.register(SiteVisitLog)
-class SiteVisitLogAdmin(ModelAdmin):
+class SiteVisitLogAdmin(ModelAdmin[SiteVisitLog]):
     list_display = ("technician", "job_site", "arrival_time", "departure_time")
     fields = ("technician", "job_site", "arrival_time", "departure_time")
     readonly_fields = ("technician", "job_site", "arrival_time", "departure_time")
