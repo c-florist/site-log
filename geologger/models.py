@@ -10,3 +10,11 @@ class JobSite(Model):
 
     def __str__(self) -> str:
         return self.name
+
+
+class Technician(Model):
+    name = TextField()
+    last_location = PointField(null=True, blank=True, editable=False)
+
+    def __str__(self) -> str:
+        return self.name
