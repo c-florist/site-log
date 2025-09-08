@@ -55,4 +55,4 @@ class TechnicianLocationPingView(APIView):
 
                 return Response({"message": "Departure logged"}, status=200)
 
-        return Response({"message": "No site in range"}, status=204)
+        return Response(status=204)
