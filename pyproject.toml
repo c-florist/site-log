@@ -54,6 +54,7 @@ exclude = [
   ".venv",
   "**/__pycache__",
   "**/.ruff_cache",
+  "**/tests",
 ]
 pythonVersion = "3.13"
 reportMissingImports = "error"

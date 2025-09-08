@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from django.utils import timezone
 from django.contrib.gis.db.models import PointField
@@ -38,7 +38,7 @@ class SiteVisitLog(Model):
     departure_time = DateTimeField(null=True, blank=True)
 
     @property
-    def duration(self) -> datetime:
+    def duration(self) -> timedelta:
         if self.departure_time:
             return self.departure_time - self.arrival_time
 

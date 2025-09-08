@@ -16,9 +16,6 @@ class TechnicianLocationPingView(APIView):
     permission_classes = [AllowAny]
 
     def post(self, request: Request, technician_id: int) -> Response:
-        if not isinstance(request.data, dict):
-            return Response({"error": "Invalid request data format"}, status=400)
-
         lat = request.data.get("latitude")
         lon = request.data.get("longitude")
         if not lat or not lon:
