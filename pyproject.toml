@@ -21,6 +21,7 @@ respect-gitignore = true
 exclude = [
   "__pycache__",
   ".ruff_cache",
+  "./geologger/migrations",
 ]
 line-length = 120
 indent-width = 4
